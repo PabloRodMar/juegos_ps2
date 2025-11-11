@@ -1,0 +1,48 @@
+/*
+Theme Name: Juegos
+Theme URI: http://www.google.es
+Author: Pablo Rodríguez
+Author URI: http://www.google.es
+Description: Página dónde se publica contenido sobre la Play 2.
+Version: 1.0
+License: licencia
+License URI: http://www.google.es
+Text Domain: wordpress
+*/
+
+body {
+    background: linear-gradient(to bottom, #2F00FF, #000000);
+    color: white;
+    font-family: 'Montserrat';
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+}
+
+.barra_header {
+    justify-content: space-between;
+}
+
+.navegacion {
+    font-size: 32px;
+    margin: 0px 20px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.site-info {
+    display: flex;
+    justify-content: space-between; /* separa las dos secciones */
+    padding: 1rem 1rem;
+}
+
+.footer-social {
+    text-align: left;
+}
+
+.redes {
+    width: 48px;
+    height: 48px;
+    margin: 0 10px;
+}
