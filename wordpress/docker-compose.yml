@@ -16,6 +16,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
       - ./themes:/var/www/html/wp-content/themes
+      - ./plugins:/var/www/html/wp-content/plugins
     restart: always
 
   db:
