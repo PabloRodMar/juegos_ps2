@@ -1,3 +1,5 @@
+<div class="noticias">
+
 <?php
 // Consulta personalizada para posts con categoría "noticia"
 $args = array(
@@ -11,7 +13,7 @@ $query = new WP_Query($args);
 if ($query->have_posts()) : 
     while ($query->have_posts()) : $query->the_post(); ?>
 
-        <article class="noticias">
+        <article class="noticia">
             <h2><?php the_title(); ?></h2>
 
             <?php if (has_post_thumbnail()) : ?>
@@ -34,3 +36,5 @@ endif;
 
 wp_reset_postdata();
 ?>
+
+</div>
