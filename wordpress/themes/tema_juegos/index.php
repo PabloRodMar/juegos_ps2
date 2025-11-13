@@ -1,11 +1,3 @@
-<?php
-    get_header();
-?> 
-    <main>
-        <?php
-            get_template_part('template-parts/loop-generico');
-        ?>
-    </main>
-<?php
-    get_footer();
-?>
+<?php get_header(); ?> 
+<!-- Aquí sólo se entra en caso de error (por ahora) -->
+<?php get_footer(); ?>

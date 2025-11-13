@@ -10,46 +10,136 @@ License URI: http://www.google.es
 Text Domain: wordpress
 */
 
+/* 
+----------------
+GENERAL
+----------------
+*/
+
 body {
-    background: linear-gradient(to bottom, #2F00FF, #000000);
-    color: white;
-    font-family: 'Montserrat';
-    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+	background: linear-gradient(to bottom, #2F00FF, #000000);
+	color: white;
+	font-family: 'Montserrat';
+	background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
 }
 
+/* 
+----------------
+PARTE DEL HEADER 
+----------------
+*/
+
 .barra_header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .navegacion {
-    display: flex;
-    align-items: center; 
-    font-size: 32px;
-    margin: 0 20px;
+	display: flex;
+	align-items: center; 
+	font-size: 32px;
+	margin: 0 20px;
+	color: white;
+}
+
+.navegacion:hover {
+	color: #000000;
 }
 
 .logo {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
 }
 
+/* 
+----------------
+PARTE DEL FOOTER
+----------------
+*/
+
 .site-info {
-    display: flex;
-    justify-content: space-between; /* separa las dos secciones */
-    padding: 1rem 1rem;
+	display: flex;
+	justify-content: space-between; /* separa las dos secciones */
+	padding: 1rem 1rem;
 }
 
 .footer-social {
-    text-align: left;
+	text-align: left;
 }
 
 .redes {
-    width: 48px;
-    height: 48px;
-    margin: 0 10px;
+	width: 48px;
+	height: 48px;
+	margin: 0 10px;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+-----------------------------
+*/
+
+.titulo {
+	text-align: center;
+}
+
+.titulo-texto {
+	font-size: 64px;
+	margin-bottom: 10px;
+}
+
+.sub-titulo {
+	font-size: 16px;
+}
+
+.titulo-img {
+	width: 260px;
+	height: 330px;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+JUEGOS
+-----------------------------
+*/
+
+.titulo-juegos {
+  font-size: 32px;
+}
+
+.juegos {
+  text-align: center;
+}
+
+.juegos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.juego {
+  font-size: 20px;
+  padding: 0 50px;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+NOTICIAS
+-----------------------------
+*/
+
+.noticias {
+	text-align: center;
+}
+
+.noticia-desc {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 700px;
 }
