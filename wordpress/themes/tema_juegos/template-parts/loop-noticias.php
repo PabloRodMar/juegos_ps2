@@ -5,7 +5,7 @@
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => -1,
-    'category_name' => 'noticias'
+    'category_name' => 'noticia'
 );
 
 $query = new WP_Query($args);

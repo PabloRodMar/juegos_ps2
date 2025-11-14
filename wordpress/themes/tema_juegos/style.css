@@ -109,7 +109,13 @@ JUEGOS
 */
 
 .titulo-juegos {
+  margin-top: 200px;
   font-size: 32px;
+}
+
+.titulo-juego {
+  color: white;
+  font-size: 24px;
 }
 
 .juegos {
@@ -127,6 +133,15 @@ JUEGOS
   padding: 0 50px;
 }
 
+.ver-todos {
+	color: white;
+	font-size: 20px;
+}
+
+.ver-todos:hover {
+	color: blue;
+}
+
 /* 
 -----------------------------
 PARTE DEL LA PÁGINA DE INICIO
@@ -134,52 +149,154 @@ NOTICIAS
 -----------------------------
 */
 
-.noticias {
+.noticia-inicio-titulo {
+	margin-top: 200px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.noticias-inicio-grid {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.leer-mas {
+	color: white;
+	font-size: 20px;
+}
+
+.leer-mas:hover {
+	color: blue;
+}
+
+.ver-todas {
+	color: white;
+	font-size: 20px;
+}
+
+.ver-todas-container {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.ver-todas:hover {
+	color: blue;
+}
+
+/* 
+-----------------------------
+PARTE DEL LAS NOTICIAS
+-----------------------------
+*/
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
+    text-align: center;
 }
 
 .noticia {
-	text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
-	font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .noticia-img img {
     width: 100%;
-    height: 250px;
+    max-width: 350px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin: 0 auto;
 }
 
 .noticia-desc {
     max-width: 90%;
-    margin: 0 auto;
     line-height: 1.5;
+    margin: 0 auto;
 }
 
-/* Pantallas grandes */
+.articulo {
+	text-align: left;
+}
+
 @media (min-width: 1024px) {
     .noticias {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Tablet */
 @media (min-width: 600px) and (max-width: 1023px) {
     .noticias {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Móviles*/
 @media (max-width: 599px) {
     .noticias {
         grid-template-columns: 1fr;
     }
+}
+
+/* 
+-----------------------------
+PARTE DE EL DESPLEGABLE DE
+JUEGOS, PARA LAS CATEGORIAS
+-----------------------------
+*/
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Submenu oculto por defecto */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: #222;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 999;
+}
+
+/* Mostrar submenu al hover */
+.juegos-dropdown:hover .sub-menu {
+    display: block;
+}
+
+/* Estilo de los items del submenu */
+.sub-menu li {
+    padding: 5px 20px;
+}
+
+.sub-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sub-menu li a:hover {
+    background-color: #444;
 }

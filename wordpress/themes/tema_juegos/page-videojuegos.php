@@ -1,13 +1,14 @@
 <?php
 /*
-Template Name: Noticias
+Template Name: videojuegos
 */
 ?>
+
 
 <?php get_header(); ?> 
 <main>
 <?php
-    get_template_part('template-parts/loop', 'noticias');
+    get_template_part('template-parts/loop', 'videojuegos');
 ?>
 </main>
 <?php get_footer(); ?>

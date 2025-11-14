@@ -1,10 +1,10 @@
 <?php
 /*
-    Plugin Name: Post Personalizado
-    Description: Crear un post personalizado
+    Plugin Name: Juegos
+    Description: Crear juegos
     Version: 1.0.0
-    Author: Rayco
-    Text Domain: juegos
+    Author: Rayco y Pablo
+    Text Domain: videojuegos
 */
 
 
@@ -35,7 +35,7 @@ function registrar_cpt_videojuegos() {
         'query_var'          => true,
         'rewrite'            => array('slug' => 'videojuegos'),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-games', 

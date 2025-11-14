@@ -11,4 +11,5 @@ function mi_tema_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'mi_tema_enqueue_styles' );
 add_theme_support('post-thumbnails');
 add_post_type_support('post', 'excerpt');
+
 ?>
