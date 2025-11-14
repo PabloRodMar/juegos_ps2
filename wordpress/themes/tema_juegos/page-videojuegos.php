@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: videojuegos
+Template Name: Videojuegos
 */
 ?>
 

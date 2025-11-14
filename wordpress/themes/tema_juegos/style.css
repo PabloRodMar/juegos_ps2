@@ -54,6 +54,54 @@ PARTE DEL HEADER
 	align-items: center;
 	margin-left: auto;
 }
+/* 
+-----------------------------
+PARTE DE EL DESPLEGABLE DE
+JUEGOS, PARA LAS CATEGORIAS
+-----------------------------
+*/
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Submenu oculto por defecto */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: black;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 999;
+}
+
+/* Mostrar submenu al hover */
+.juegos-dropdown:hover .sub-menu {
+    display: block;
+}
+
+/* Estilo de los items del submenu */
+.sub-menu li {
+    padding: 5px 20px;
+}
+
+.sub-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
 
 /* 
 ----------------
@@ -249,54 +297,3 @@ PARTE DEL LAS NOTICIAS
     }
 }
 
-/* 
------------------------------
-PARTE DE EL DESPLEGABLE DE
-JUEGOS, PARA LAS CATEGORIAS
------------------------------
-*/
-
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu > li {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-}
-
-/* Submenu oculto por defecto */
-.sub-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    background: #222;
-    padding: 10px 0;
-    min-width: 200px;
-    z-index: 999;
-}
-
-/* Mostrar submenu al hover */
-.juegos-dropdown:hover .sub-menu {
-    display: block;
-}
-
-/* Estilo de los items del submenu */
-.sub-menu li {
-    padding: 5px 20px;
-}
-
-.sub-menu li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-
-.sub-menu li a:hover {
-    background-color: #444;
-}

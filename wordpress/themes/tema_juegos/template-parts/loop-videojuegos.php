@@ -13,7 +13,6 @@ if ($videojuegos->have_posts()) :
             <h2><?php the_title(); ?></h2>
             <!-- ENLACE A LA PÁGINA DEL VIDEOJUEGO -->
             <a href="<?php the_permalink(); ?>" class="videojuego-link">
-
                 <!-- PORTADA -->
                 <div class="videojuego-portada">
                     <?php 
@@ -24,7 +23,6 @@ if ($videojuegos->have_posts()) :
                 </div>
             </a>
         </article>
-    
 <?php
     endwhile;
     wp_reset_postdata();
