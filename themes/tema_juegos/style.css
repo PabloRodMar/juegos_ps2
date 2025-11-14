@@ -1,0 +1,299 @@
+/*
+Theme Name: Juegos
+Theme URI: http://www.google.es
+Author: Pablo Rodríguez
+Author URI: http://www.google.es
+Description: Página dónde se publica contenido sobre la Play 2.
+Version: 1.0
+License: licencia
+License URI: http://www.google.es
+Text Domain: wordpress
+*/
+
+/* 
+----------------
+GENERAL
+----------------
+*/
+
+body {
+	background: linear-gradient(to bottom, #2F00FF, #000000);
+	color: white;
+	font-family: 'Montserrat';
+	background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+}
+
+/* 
+----------------
+PARTE DEL HEADER 
+----------------
+*/
+
+.barra_header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navegacion {
+	display: flex;
+	align-items: center; 
+	font-size: 32px;
+	margin: 0 20px;
+	color: white;
+}
+
+.navegacion:hover {
+	color: #000000;
+}
+
+.logo {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+/* 
+-----------------------------
+PARTE DE EL DESPLEGABLE DE
+JUEGOS, PARA LAS CATEGORIAS
+-----------------------------
+*/
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Submenu oculto por defecto */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background: black;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 999;
+}
+
+/* Mostrar submenu al hover */
+.juegos-dropdown:hover .sub-menu {
+    display: block;
+}
+
+/* Estilo de los items del submenu */
+.sub-menu li {
+    padding: 5px 20px;
+}
+
+.sub-menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* 
+----------------
+PARTE DEL FOOTER
+----------------
+*/
+
+.site-info {
+	display: flex;
+	justify-content: space-between; /* separa las dos secciones */
+	padding: 1rem 1rem;
+}
+
+.footer-social {
+	text-align: left;
+}
+
+.redes {
+	width: 48px;
+	height: 48px;
+	margin: 0 10px;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+-----------------------------
+*/
+
+.titulo {
+	text-align: center;
+}
+
+.titulo-texto {
+	font-size: 64px;
+	margin-bottom: 10px;
+}
+
+.sub-titulo {
+	font-size: 16px;
+}
+
+.titulo-img {
+	width: 260px;
+	height: 330px;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+JUEGOS
+-----------------------------
+*/
+
+.titulo-juegos {
+  margin-top: 200px;
+  font-size: 32px;
+}
+
+.titulo-juego {
+  color: white;
+  font-size: 24px;
+}
+
+.juegos {
+  text-align: center;
+}
+
+.juegos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.juego {
+  font-size: 20px;
+  padding: 0 50px;
+}
+
+.ver-todos {
+	color: white;
+	font-size: 20px;
+}
+
+.ver-todos:hover {
+	color: blue;
+}
+
+/* 
+-----------------------------
+PARTE DEL LA PÁGINA DE INICIO
+NOTICIAS
+-----------------------------
+*/
+
+.noticia-inicio-titulo {
+	margin-top: 200px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.noticias-inicio-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.leer-mas {
+	color: white;
+	font-size: 20px;
+}
+
+.leer-mas:hover {
+	color: blue;
+}
+
+.ver-todas {
+	color: white;
+	font-size: 20px;
+}
+
+.ver-todas-container {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.ver-todas:hover {
+	color: blue;
+}
+
+/* 
+-----------------------------
+PARTE DEL LAS NOTICIAS
+-----------------------------
+*/
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.noticia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.noticia-img img {
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.noticia-desc {
+    max-width: 90%;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+.articulo {
+	text-align: left;
+}
+
+@media (min-width: 1024px) {
+    .noticias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .noticias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 599px) {
+    .noticias {
+        grid-template-columns: 1fr;
+    }
+}
+
