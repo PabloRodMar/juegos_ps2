@@ -19,7 +19,7 @@
     if ($juegos->have_posts()) :
     while ($juegos->have_posts()) : $juegos->the_post(); ?>
         <article class="juego">
-        <a href="<?php the_permalink(); ?>" class="titulo-juego"><?php the_title(); ?></a>
+        <a class="titulo-juego"><?php the_title(); ?></a>
         <a href="<?php the_permalink(); ?>">
             <?php if (has_post_thumbnail()) : ?>
                 <div class="thumb">
@@ -62,7 +62,9 @@
 <div class="ver-todas-container">
     <a class="ver-todas" href="<?php echo get_permalink( get_page_by_path('noticias') );?>">Ver todas las noticias</a>
 </div>
-
+<br>
+<br>
+<br>
 </section>
 
 <?php get_footer(); ?>

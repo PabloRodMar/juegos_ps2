@@ -1,24 +1,33 @@
 <?php get_header(); ?>
 
 <main class="single-videojuego">
-
 <?php
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article>
+            <!-- TÍTULO PRINCIPAL DE LA PÁGINA  -->
+            <h1 class="titulo-pagina-juego"><?php the_title(); ?></h1>
 
-            <!-- TÍTULO -->
-            <h1 class="titulo-videojuego"><?php the_title(); ?></h1>
-
-            <!-- IMAGEN DESTACADA -->
+            <!-- IMAGEN DESTACADA Y CARÁTULA -->
             <div class="thumbnail-videojuego">
-                <?php 
+                <?php
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('large');
+                    the_post_thumbnail('medium'); // Tamaño 'medium' para carátulas centradas
                 }
                 ?>
             </div>
+
+            <!-- SECCIÓN DE GAMEPLAY (Advanced Custom Fields) -->
+            <section class="gameplay-video">
+                <?php
+                $video_embed = get_field('gameplay_video_embed'); 
+                
+                if (!empty($video_embed)) {
+                    echo '<div class="gameplay">' . $video_embed . '</div>';
+                }
+                ?>
+            </section>  
             
             <!-- DESCRIPCIÓN -->
             <section class="descripcion-videojuego">
@@ -28,10 +37,8 @@ if (have_posts()) :
 
             <!-- COMENTARIOS -->
             <section class="comentarios-videojuego">
-                <h2>Comentarios</h2>
-                <?php comments_template(); ?>
+                    <?php comments_template();?>
             </section>
-
         </article>
 
 <?php

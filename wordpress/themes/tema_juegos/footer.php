@@ -16,10 +16,27 @@
                     </a>
                 </div>
                 <div>
-                    <h1>Contacta con nosotros</h1>
+                    <a href="<?php echo get_permalink( get_page_by_path('contacto') ); ?>" class="contacto">Contacta con nosotros</a>
                 </div>
             </div>
         </footer>
         <?php wp_footer(); ?>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainMenu = document.getElementById('main-menu');
+
+            if (menuToggle && mainMenu) {
+                menuToggle.addEventListener('click', function() {
+                    // Alterna la clase 'is-open'
+                    mainMenu.classList.toggle('is-open');
+                    
+                    // Actualiza el estado ARIA
+                    let isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                    this.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+        });
+        </script>
     </body>
 </html>

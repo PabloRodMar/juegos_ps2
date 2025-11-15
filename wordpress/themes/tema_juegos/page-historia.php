@@ -35,18 +35,22 @@ Template Name: Historia
             <article>
                 <h3>Retrocompatibilidad:</h3>
                 <p>La PS2 podía reproducir tanto los juegos como los mandos y tarjetas de memoria de la PlayStation original. Esto fue un gran atractivo, pues los jugadores no perdían sus antiguas colecciones.</p>
+                <br>
             </article>
             <article>
                 <h3>DVD multimedia:</h3>
                 <p>En el año 2000, los reproductores de DVD eran caros. La PS2 ofrecía una consola y un reproductor en uno, lo que ayudó a su enorme popularidad.</p>
+                <br>
             </article>
             <article>
                 <h3>Diseño icónico:</h3>
                 <p>Su diseño negro mate, con forma vertical u horizontal, se volvió un símbolo de elegancia tecnológica. Más adelante, Sony lanzó versiones más ligeras y delgadas, especialmente la PS2 Slim (2004), que redujo drásticamente el tamaño y el consumo energético.</p>
+                <br>
             </article>
             <article>
                 <h3>Conectividad en línea:</h3>
                 <p>Aunque no era en línea la PS2 introdujo adaptadores de red y juegos online como Final Fantasy XI, SOCOM: U.S. Navy SEALs y Resident Evil: Outbreak.</p>
+                <br>
             </article>
         </div>
     </section>
@@ -81,6 +85,9 @@ Template Name: Historia
             <p>
                 Su éxito consolidó a Sony como un líder indiscutible en la industria, y su influencia se siente aún en las consolas modernas.
             </p>
+            <br>
+            <br>
+            <br>
         </div>
     </section>
 

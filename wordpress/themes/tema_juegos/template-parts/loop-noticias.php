@@ -5,7 +5,7 @@
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => -1,
-    'category_name' => 'noticia'
+    'category_name' => 'noticias'
 );
 
 $query = new WP_Query($args);
@@ -26,7 +26,7 @@ if ($query->have_posts()) :
                 <?php the_excerpt(); ?>
             </div>
 
-            <a href="<?php the_permalink(); ?>">Leer más</a>
+            <a href="<?php the_permalink(); ?>" class="leer-mas">Leer más</a>
         </article>
 
     <?php endwhile;
