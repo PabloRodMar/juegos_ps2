@@ -35,25 +35,21 @@ PARTE DEL HEADER
 
 .barra_header {
     display: flex;
-    /* CAMBIO CLAVE: Usaremos 'center' para centrar el contenido principal */
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
     position: relative;
     z-index: 10;
 }
 
-/* El logo debe tener un margen para separarse de la navegación */
 .logo {
     width: 48px;
     height: 48px;
     display: flex;
     align-items: center;
-    /* Eliminamos el 'margin-left: auto' que lo forzaba a la extrema derecha */
-    margin-right: 40px; /* Añade un espacio entre el logo y los enlaces */
+    margin-right: 40px;
 }
 
-/* El contenedor de todos los enlaces */
 .main-navigation {
     display: flex; 
     align-items: center;
@@ -71,30 +67,29 @@ PARTE DEL HEADER
 	color: #000000;
 }
 
-/* --- 2. MEDIA QUERY (MOBILE - Menos de 901px) --- */
+/* 
+------------------------
+PARTE DE LA "HAMBURGUESA
+------------------------
+*/
+
 @media (max-width: 900px) { 
     
     .barra_header {
-        /* Fuerza a que el logo y el toggle se vean en la línea principal */
         flex-wrap: nowrap;
-        
-        /* CAMBIO CLAVE: Alinea logo a un extremo y botón al otro. */
         justify-content: space-between; 
     }
 
-    /* 2.1. Mostrar y POSICIONAR el botón hamburguesa a la izquierda del menú */
     .menu-toggle {
         display: block; 
-        order: 1; /* ¡NUEVO! Coloca el botón primero, a la izquierda */
-        margin-right: auto; /* Empuja el logo y el menú al otro lado */
+        order: 1; 
+        margin-right: auto;
     }
     
-    /* Mueve el logo para que esté justo a la izquierda del menú desplegado */
     .logo {
-        order: 2; /* Coloca el logo en la segunda posición */
+        order: 2;
     }
 
-    /* 2.2. Ocultar y preparar la navegación móvil */
     .main-navigation {
         display: none; 
         flex-direction: column; 
@@ -103,43 +98,34 @@ PARTE DEL HEADER
         top: 100%; 
         left: 0;
         background-color: #111;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         z-index: 99;
     }
     
-    /* 2.3. CLASE JS: Mostrar el menú al hacer click */
     .main-navigation.is-open {
         display: flex; 
-        /* Para que los ítems del menú empiecen desde la izquierda */
         align-items: flex-start;
     }
 
-    /* 2.4. Estilos de los ítems apilados */
     .main-navigation .menu {
         flex-direction: column;
         width: 100%;
     }
 
-    /* Todos los enlaces y ítems deben ser bloques para ocupar todo el ancho */
     .main-navigation a,
     .main-navigation .menu > li {
         display: block;
         width: 100%;
         margin-right: 0;
         padding: 15px 20px;
-        border-bottom: 1px solid #333;
         text-align: left;
     }
 
-    /* Ajuste del Submenú en móvil */
     .sub-menu {
         position: static; 
         display: block; 
         background: #222; 
         padding-left: 30px; 
     }
-    
-    /* Mantén el JavaScript activo para que el botón funcione */
 }
 
 
@@ -162,7 +148,6 @@ JUEGOS, PARA LAS CATEGORIAS
     margin-right: 20px;
 }
 
-/* Submenu oculto por defecto */
 .sub-menu {
     display: none;
     position: absolute;
@@ -175,12 +160,10 @@ JUEGOS, PARA LAS CATEGORIAS
     z-index: 999;
 }
 
-/* Mostrar submenu al hover */
 .juegos-dropdown:hover .sub-menu {
     display: block;
 }
 
-/* Estilo de los items del submenu */
 .sub-menu li {
     padding: 5px 20px;
 }
@@ -200,7 +183,7 @@ PARTE DEL FOOTER
 
 .site-info {
 	display: flex;
-	justify-content: space-between; /* separa las dos secciones */
+	justify-content: space-between;
 	padding: 1rem 1rem;
 }
 
@@ -302,8 +285,9 @@ NOTICIAS
 }
 
 .noticias-inicio-grid {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     text-align: center;
     max-width: 1200px;
@@ -531,7 +515,6 @@ INDIVIDUAL
     border-radius: 10px;
 }
 
-/* Estilo para el nombre del autor */
 .comment-author-name {
     font-size: 20px;
     color: #99FFFF; 
@@ -614,6 +597,9 @@ PARTE DEL RESPONSIVE
     .videojuegos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+    .comentarios-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -629,9 +615,12 @@ PARTE DEL RESPONSIVE
     .videojuegos-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .comentarios-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 700px) {
     .noticias {
         grid-template-columns: 1fr;
     }
@@ -642,7 +631,13 @@ PARTE DEL RESPONSIVE
         grid-template-columns: 1fr;
     }
     .videojuegos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .comentarios-grid {
+        grid-template-columns: 1fr; 
+    }
+    .noticias-inicio-grid { 
+        grid-template-columns: 1fr; 
     }
 }
 
