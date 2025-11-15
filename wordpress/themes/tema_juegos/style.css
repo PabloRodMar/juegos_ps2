@@ -238,9 +238,14 @@ NOTICIAS
 
 /* 
 -----------------------------
-PARTE DEL LAS NOTICIAS
+PARTE DE LAS NOTICIAS
 -----------------------------
 */
+
+.todas-las-noticias {
+    text-align: center;
+    font-size: 64px;
+}
 
 .noticias {
     display: grid;
@@ -275,12 +280,91 @@ PARTE DEL LAS NOTICIAS
     margin: 0 auto;
 }
 
-.articulo {
-	text-align: left;
+/* 
+-----------------------------
+PARTE DE LOS JUEGOS
+TODOS LOS JUEGOS
+-----------------------------
+*/
+
+.todos-los-juegos {
+    text-align: center;
+    font-size: 64px;
 }
+
+.videojuegos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* 
+-----------------------------
+PARTE DE LOS JUEGOS
+JUEGOS POR CATEGORÍA
+-----------------------------
+*/
+
+.categoria-juego {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+}
+
+.categoria-juego h1 {
+    text-align: center;
+    font-size: 64px;
+}
+
+.videojuegos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* 
+-----------------------------
+PARTE DE LA HISTORIA
+-----------------------------
+*/
+
+.principal-historia {
+    justify-content: center;
+}
+
+.principal-historia h1 {
+    font-size: 64px;
+    text-align: center;
+}
+
+.principal-historia p {
+    font-size: 18px;
+}
+
+.subtitulo-historia {
+    text-align: center;
+    font-size: 32px;
+}
+
+/* 
+-----------------------------
+PARTE DEL RESPONSIVE
+NOTICIAS
+-----------------------------
+*/
 
 @media (min-width: 1024px) {
     .noticias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .juegos-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }

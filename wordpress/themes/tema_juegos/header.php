@@ -38,7 +38,7 @@
 
             <a href="<?php echo get_permalink( get_page_by_path('noticias') ); ?>" class="navegacion">Noticias</a>
             <a class="navegacion">Consola</a>
-            <a class="navegacion">Historia</a>
+            <a href="<?php echo get_permalink( get_page_by_path('historia') ); ?>" class="navegacion">Historia</a>
             <a class="navegacion">Contacto</a>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/play.png" class="logo">
         </div>

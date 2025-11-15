@@ -13,7 +13,7 @@
                     <?php the_post_thumbnail('medium'); ?>
                 </div>
             <?php endif; ?>
-            <h2 class="articulo">Artículo</h2>
+            <h2>Artículo</h2>
             <div class="noticia-contenido">
                 <?php the_content(); ?>
             </div>

@@ -32,7 +32,7 @@
     wp_reset_postdata();
     endif; ?>
 </div>
-<a href="<?php the_permalink(); ?>" class="ver-todos">Ver todos</a>
+<a href="<?php echo get_permalink( get_page_by_path('videojuegos') ); ?>" class="ver-todos">Ver todos</a>
 </section>
 
 

@@ -1,3 +1,5 @@
+<div class="videojuegos">
+
 <?php
 $args = array(
     'post_type'      => 'videojuegos',
@@ -30,3 +32,5 @@ else :
     echo "<p>No hay videojuegos disponibles.</p>";
 endif;
 ?>
+
+</div>
